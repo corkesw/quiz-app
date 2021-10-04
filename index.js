@@ -35,7 +35,21 @@ questions = questionNumbers.map((number) => {
 console.log(questions, '<<<<<<<<<')
 
 function questionMaker() {
-    const question = document.getElementById('question_insert')
+    const resetWrongResult = [
+        ...document.getElementsByClassName("incorrect_class"),
+      ];
+    resetWrongResult.forEach((result) => (result.className = "unanswered_class_wrong"));
+
+    const resetCorrectResult = [
+        ...document.getElementsByClassName("correct_class"),
+      ];
+      resetCorrectResult.forEach((result) => (result.className = "unanswered_class_wrong"));
+
+     questionAnswered = false
+     document.getElementById('answer_text').innerText = "";
+     
+    
+      const question = document.getElementById('question_insert')
     const answer0 = document.getElementById('answer0')
     answer0.innerText = questions[0].answer[0]
     const answer1 = document.getElementById('answer1')
@@ -50,7 +64,12 @@ function questionMaker() {
     const correctAnswerHTML = document.getElementById(correctAnswer)
     correctAnswerHTML.className = 'unanswered_class_correct'
     correctAnswerHTML.setAttribute('onclick', 'answerQuestion(true)')
+    questions.shift()
+    if (questions.length === 0) { 
+        document.getElementById('next_id').setAttribute('onclick', 'getResults()')
+        document.getElementById('next_id').innerText = ('Get Results')
 
+    }
 }
 
 function answerQuestion(answer) {
@@ -72,9 +91,12 @@ function answerQuestion(answer) {
       correctAnswerCount++;
       questionAnswered = true;
     }
-
-    console.log(correctAnswerCount);
   } else {
     answer_text.innerText = "Wrong, loser!";
   }
+}
+
+function getResults() {
+    console.log("I am called")
+    document.getElementById('final_score').innerText = (`You have scored ${correctAnswerCount}`)
 }
