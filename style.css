@@ -1,0 +1,11 @@
+.unanswered_class {
+background-color:bisque;
+}
+
+.correct_class {
+    background-color: chartreuse;
+}
+
+.incorrect_class {
+    background-color: crimson;
+}
