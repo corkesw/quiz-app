@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
 
     <title>Mini-Quiz</title>
-</head>
-<body>
+  </head>
+  <body onload="questionMaker()">
     <h1>The World's Bestest Mini-Quiz</h1>
     <h2>Choose the correct answer.</h2>
 
+    <div class="question">
     <h3>Question 1</h3>
-    <p>What country is associated with Roast Beef and Yorkshire Pudding? </p>
-
-    <ul>
-        <li>Mexico <button id="mexico" class="unanswered_class_wrong" onclick="answerQuestion()">Click</button></li>
-        <li>France <button id="france" class="unanswered_class_wrong" onclick="answerQuestion()">Click</button></li>
-        <li>England <button id="england" class="unanswered_class_correct" onclick="answerQuestion()">Click</button></li>
-        <li>Guatemala <button id="guatemala" class="unanswered_class_wrong" onclick="answerQuestion()">Click</button></li>
-    </ul>
-
-    <div id="answer_id">
-    <p>Answer here</p>
+    <div id="question_insert">QUESTION GOES HERE</div>
+    
+      <ul>
+        <li>
+          <button
+            id="answer0"
+            class="unanswered_class_wrong"
+            onclick="answerQuestion(false)"
+          >
+          </button>
+        </li>
+        <li>
+          <button
+            id="answer1"
+            class="unanswered_class_wrong"
+            onclick="answerQuestion(false)"
+          >
+            
+          </button>
+        </li>
+        <li>
+          
+          <button id="answer2"
+            id="england"
+            class="unanswered_class_wrong"
+            onclick="answerQuestion(false)"
+          >
+          </button>
+        </li>
+        <li>
+          
+          <button id="answer3"
+            id="guatemala"
+            class="unanswered_class_wrong"
+            onclick="answerQuestion(false)"
+          >
+          </button>
+        </li>
+      </ul>
     </div>
 
-
-</body>
+    <div id="answer_id">
+      <p id="answer_text">Answer here</p>
+    </div>
+  </body>
 </html>
