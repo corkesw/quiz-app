@@ -1,76 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">     
-<script src="index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
 
     <title>Mini-Quiz</title>
-  </head>
-  <body onload="questionMaker()">
+</head>
+
+<body onload="questionMaker()">
     <h1>The World's Bestest Mini-Quiz</h1>
     <h2>Choose the correct answer.</h2>
 
     <div class="question">
-    <h3>Question....</h3>
-    <div id="question_insert">QUESTION GOES HERE</div>
-    
-      <ul>
-        <li>
-          <button
-            id="answer0"
-            class="unanswered_class_wrong"
-            onclick="answerQuestion(false)"
-          >
-          </button>
-        </li>
-        <li>
-          <button
-            id="answer1"
-            class="unanswered_class_wrong"
-            onclick="answerQuestion(false)"
-          >
-            
-          </button>
-        </li>
-        <li>
-          
-          <button id="answer2"
-            id="england"
-            class="unanswered_class_wrong"
-            onclick="answerQuestion(false)"
-          >
-          </button>
-        </li>
-        <li>
-          
-          <button id="answer3"
-            id="guatemala"
-            class="unanswered_class_wrong"
-            onclick="answerQuestion(false)"
-          >
-          </button>
-        </li>
-      </ul>
+        <h3>Question....</h3>
+        <div id="question_insert">QUESTION GOES HERE</div>
+
+        <ul>
+            <li>
+                <button id="answer0" class="unanswered_class_wrong" onclick="answerQuestion(false)">
+                </button>
+            </li>
+            <li>
+                <button id="answer1" class="unanswered_class_wrong" onclick="answerQuestion(false)">
+
+                </button>
+            </li>
+            <li>
+
+                <button id="answer2" id="england" class="unanswered_class_wrong" onclick="answerQuestion(false)">
+                </button>
+            </li>
+            <li>
+
+                <button id="answer3" id="guatemala" class="unanswered_class_wrong" onclick="answerQuestion(false)">
+                </button>
+            </li>
+        </ul>
     </div>
 
     <div id="answer_id">
-      <p id="answer_text">Answer here</p>
+        <p id="answer_text">Answer here</p>
     </div>
 
-<button id="next_id" onclick="questionMaker()">Next</button>
+    <button id="next_id" onclick="questionMaker()">Next</button>
 
-<div id="final_score"></div>
+    <div id="final_score"></div>
 
 
 
-  </body>
+</body>
+
 </html>
