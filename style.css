@@ -1,3 +1,12 @@
+body {
+font-family: Quicksand;
+background: url("./images/repeated-square.png");
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
 .unanswered_class {
 background-color:bisque;
 }
@@ -8,4 +17,37 @@ background-color:bisque;
 
 .incorrect_class {
     background-color: crimson;
+}
+
+h1 {
+    font-family: Inter;
+    text-align: center;
+}
+
+h2 {
+    font-family: Quicksand;
+}
+
+h3 {
+    font-family: Quicksand;
+}
+
+p {
+    font-family: Quicksand;
+}
+
+button {
+    border-radius: 10px;
+    padding: 1vh;
+    margin: 1%;
+
+}
+
+button:hover {
+    background-color: #FFBF00;
+    transition: 1000ms;
+}
+
+#answer_id {
+    font-weight: bold;
 }

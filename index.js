@@ -32,21 +32,28 @@ questionNumbers.sort(() => Math.random() - 0.5)
 questions = questionNumbers.map((number) => {
     return bankOfQuestions[number]
 })
-console.log(questions, '<<<<<<<<<')
 
 function questionMaker() {
     const resetWrongResult = [
         ...document.getElementsByClassName("incorrect_class"),
       ];
-    resetWrongResult.forEach((result) => (result.className = "unanswered_class_wrong"));
+    resetWrongResult.forEach(function (result){
+        result.className = "unanswered_class_wrong"
+        result.setAttribute('onclick', 'answerQuestion(false)')
+    }) ;
 
     const resetCorrectResult = [
         ...document.getElementsByClassName("correct_class"),
       ];
-      resetCorrectResult.forEach((result) => (result.className = "unanswered_class_wrong"));
+      resetCorrectResult.forEach(function (result){
+          result.className = "unanswered_class_wrong"
+          result.setAttribute('onclick', 'answerQuestion(false)')
+      })
+
 
      questionAnswered = false
      document.getElementById('answer_text').innerText = "";
+     
      
     
       const question = document.getElementById('question_insert')
@@ -89,9 +96,11 @@ function answerQuestion(answer) {
     answer_text.innerText = "That's correct!";
     if ((questionAnswered === false)) {
       correctAnswerCount++;
+      
       questionAnswered = true;
     }
   } else {
+    questionAnswered = true;  
     answer_text.innerText = "Wrong, loser!";
   }
 }
